@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top{
+    padding: 2em;
+}
+
+#title-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#title-container span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+#title-container h1{
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+#title-container p{
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+#description{
+    color: hsl(0, 36%, 70%);
+}
+
+#description p{
+    line-height: 1.8;
+}
+
+#email-container{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    border-radius: 20px;
+}
+
+#email-input{
+    border: none !important;
+    margin: 0 0 0 1em;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+#email-input:focus{
+    outline: none;
+}
+
+/* Input placeholder selectors */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(0, 36%, 70%);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: hsl(0, 36%, 70%);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: hsl(0, 36%, 70%);
+  }
+
+#error-icon{
+    display: none;
+}
+
+#btn{
+    height: 45px; 
+    width: 75px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, white, hsl(0, 93%, 68%));
+    /*background-color: hsl(0, 93%, 68%);*/
+    box-shadow: hsl(0, 36%, 70%) 0px 5px 20px;
+    /*border: 2px solid hsl(0, 93%, 68%);*/
+    z-index: 5;
+}
+
+#btn:hover{
+    /*background-color:  hsl(0, 36%, 70%);*/
+    background: linear-gradient(to bottom right, white, hsl(0, 36%, 70%));
+    box-shadow: hsl(0, 36%, 70%) 0px 5px 20px;
+    /*border: 2px solid hsl(0, 36%, 70%);*/
+    z-index: 5;
+    cursor: pointer;
+}
+
+#error-container{
+    width: 100%;
+    display: none;
+    flex-direction: flex-start;
+    margin: 0.5em 0 0 5em;
+    font-weight: 200;
+    color: red;
+}
+
+.soft_red{
+    border: 1px solid hsl(0, 36%, 70%);
+}
+
+.red{
+    border: 2px solid red;
+}
+
+footer{
+    margin: 1em;
+}
+
+@media (min-width: 375px){
+    main{
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left{
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #right{
+        display: none;
+    }
+
+    #img-mobile{
+        width: 100%;
+    }
+
+    #title-container{
+        padding: 3em 1em 1em 1em;
+    }
+
+    #title-container span{
+        font-size: 2em;
+    }
+    
+    #title-container h1{
+        font-size: 2em;
+    }
+    
+    #title-container p{
+        font-size: 2em;
+    }
+
+    #description{
+        margin: 0 1em 1em 1em;
+        text-align: center;
+    }
+
+    #email-container{
+        width: 325px;
+    }
+}
+
+@media (min-width:1000px){
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }  
+
+    #left{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 8em 8em 12em;
+        background: url('./images/bg-pattern-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #right{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-mobile{
+        display: none;
+    }
+
+    #right img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #top{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 3em 0 0 0;
+        margin: 0 0 8em 0;
+    }
+
+    #title-container{
+        width: 100%;
+        padding: 0;
+        margin: 0 0 1em 0;
+    }
+
+    #title-container span{
+        font-size: 4em;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    #title-container h1{
+        font-size: 4em;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    #title-container p{
+        font-size: 4em;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    #description{
+        margin: 0;
+        text-align: left;
+        margin: 1em 0 2em 0;
+        padding: 0 10em 0 0;
+    }
+    #email-container{
+        width: 65%;
+        margin: 1em 12em 1em 0;
+    }
+    #error-icon{
+        margin: 0 0 0 6em;
+    }
+
+}
